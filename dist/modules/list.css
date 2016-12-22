@@ -1,0 +1,19 @@
+.sb-list--inline .sb-list-item {
+  display: inline; }
+.sb-list--inline .sb-list-item:not(:last-child) {
+  margin-right: 20px; }
+
+.sb-list--styled {
+  padding-left: 20px; }
+  .sb-list--styled .sb-list-item {
+    display: list-item;
+    list-style-type: disc; }
+
+.sb-list--styled--numbered .sb-list-item {
+  list-style-type: decimal; }
+
+.sb-list-item {
+  display: block; }
+
+.sb-list-item:not(:last-child) {
+  margin-bottom: 20px; }
