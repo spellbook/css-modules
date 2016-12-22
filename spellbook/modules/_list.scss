@@ -1,0 +1,80 @@
+// *************************************
+//
+//   List
+//   -> Enumeration of items
+//
+// -------------------------------------
+//   Template (Haml)
+// -------------------------------------
+//
+// .sb-list[inline|styled|styled--numbered]
+//
+//   .sb-list-item
+//
+// *************************************
+
+// -------------------------------------
+//   Variables
+// -------------------------------------
+
+$list-space: 20px;
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+// .sb-list {}
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Inline ----- //
+
+.sb-list--inline {
+
+  .sb-list-item {
+    display: inline;
+  }
+
+  .sb-list-item:not(:last-child) {
+    margin-right: $list-space;
+  }
+
+}
+
+// ----- Styled ----- //
+
+.sb-list--styled {
+  padding-left: $list-space;
+
+  .sb-list-item {
+    display: list-item;
+    list-style-type: disc;
+  }
+
+}
+
+// Numbered
+
+.sb-list--styled--numbered {
+
+  .sb-list-item {
+    list-style-type: decimal;
+  }
+
+}
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+
+// ----- Item ----- //
+
+.sb-list-item {
+  display: block;
+}
+
+.sb-list-item:not(:last-child) {
+  margin-bottom: $list-space;
+}
