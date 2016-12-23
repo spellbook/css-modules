@@ -70,3 +70,10 @@
   display: block;
   margin-left: auto;
   margin-right: auto; }
+
+.sb-thumb {
+  border-radius: 50%;
+  display: block; }
+
+.sb-thumb--m {
+  border-radius: 4px; }
