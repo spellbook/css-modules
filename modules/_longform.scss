@@ -1,0 +1,122 @@
+// *************************************
+//
+//   Longform
+//   -> Longform content block
+//
+// -------------------------------------
+//   Template (Haml)
+// -------------------------------------
+//
+// .sb-longform
+//
+//   // ...
+//
+// *************************************
+
+// -------------------------------------
+//   Variables
+// -------------------------------------
+
+// ----- Borders ----- //
+
+$longform-blockquote-borderColor: #eaeaea;
+$longform-blockquote-borderWidth: 4px;
+$longform-blockquote-border: $longform-blockquote-borderWidth solid $longform-blockquote-borderColor;
+
+// ----- Colors ----- //
+
+$longform-blockquote-color: #979797;
+
+// ----- Spacing ----- //
+
+$longform-space: 20px;
+$longform-space-025: $longform-space * 0.25;
+$longform-space-05: $longform-space * 0.5;
+$longform-space-2: $longform-space * 2;
+
+// ----- Typography ----- //
+
+$longform-blockquote-fontSize: 20px;
+$longform-heading-lineHeight: 1.2;
+$longform-heading-fontSize-h1: 32px;
+$longform-heading-fontSize-h2: 24px;
+$longform-heading-fontSize-h3: 20px;
+$longform-heading-fontSize-h4: 18px;
+$longform-heading-fontWeight: 700;
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.sb-longform {
+
+  // ----- Headings ----- //
+
+  h1, h2, h3, h4 {
+    font-weight: $longform-heading-fontWeight;
+    line-height: $longform-heading-lineHeight;
+    margin-bottom: $longform-space-05;
+  }
+
+  h1 {
+    font-size: $longform-heading-fontSize-h1;
+  }
+
+  h2 {
+    font-size: $longform-heading-fontSize-h2;
+  }
+
+  h3 {
+    font-size: $longform-heading-fontSize-h3;
+  }
+
+  h4 {
+    font-size: $longform-heading-fontSize-h4;
+  }
+
+  h2, h3, h4 {
+    margin-top: $longform-space-2;
+  }
+
+  // ----- Element Spacing ----- //
+
+  p, ul, ol, blockquote, img {
+    margin-bottom: $longform-space;
+  }
+
+  // ----- Lists ----- //
+
+  ul, ol {
+    padding-left: $longform-space-2;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+
+  li {
+    margin-bottom: $longform-space-025;
+  }
+
+  // ----- Blockquotes ----- //
+
+  blockquote {
+    border-left: $longform-blockquote-border;
+    color: $longform-blockquote-color;
+    font-size: $longform-blockquote-fontSize;
+    padding-left: $longform-space;
+  }
+
+  // ----- Images ----- //
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
