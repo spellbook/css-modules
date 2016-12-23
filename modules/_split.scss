@@ -1,0 +1,48 @@
+// *************************************
+//
+//   Split
+//   -> Horizontally repelent content
+//
+// -------------------------------------
+//   Template (Haml)
+// -------------------------------------
+//
+// .sb-split[baseline]
+//
+//   .sb-split-item
+//   .sb-split-item
+//
+// *************************************
+
+.sb-split {
+  align-items: center;
+  display: flex;
+}
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Baseline ----- //
+
+.sb-split--baseline {
+  align-items: baseline;
+}
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// ----- Item ----- //
+
+.sb-split-item {
+
+  &:first-child {
+    flex-grow: 1;
+  }
+
+  &:last-child {
+    flex-shrink: 0;
+  }
+
+}

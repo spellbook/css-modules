@@ -1,0 +1,1 @@
+.sb-split{align-items:center;display:flex}.sb-split--baseline{align-items:baseline}.sb-split-item:first-child{flex-grow:1}.sb-split-item:last-child{flex-shrink:0}
