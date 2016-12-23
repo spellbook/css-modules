@@ -1,18 +1,25 @@
 .sb-flex {
+  display: -ms-flexbox;
   display: flex; }
 
 .sb-flex--center {
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-pack: center;
   justify-content: center; }
 
 .sb-flex--hc {
+  -ms-flex-pack: center;
   justify-content: center; }
 
 .sb-flex--vc {
+  -ms-flex-align: center;
   align-items: center; }
 
 .sb-flex--column {
+  -ms-flex-direction: column;
   flex-direction: column; }
 
 .sb-flex--wrap {
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap; }

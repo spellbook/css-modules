@@ -1,11 +1,16 @@
 .sb-split {
+  -ms-flex-align: center;
   align-items: center;
+  display: -ms-flexbox;
   display: flex; }
 
 .sb-split--baseline {
+  -ms-flex-align: baseline;
   align-items: baseline; }
 
 .sb-split-item:first-child {
+  -ms-flex-positive: 1;
   flex-grow: 1; }
 .sb-split-item:last-child {
+  -ms-flex-negative: 0;
   flex-shrink: 0; }
