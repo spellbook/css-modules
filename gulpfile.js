@@ -40,10 +40,8 @@ gulp.task('build', function() {
     .pipe(rename('spellbook-modules.min.css'))
     .pipe(cleanCSS())
     .pipe(gulp.dest('dist'));
-  gulp.src('dist/modules/*.css')
-    .pipe(rename({
-      extname : '.min.css'
-    }))
+  gulp.src(['dist/modules/*.css', '!dist/modules/*.min.css'])
+    .pipe(rename({ suffix : '.min' }))
     .pipe(cleanCSS())
     .pipe(gulp.dest('dist/modules'));
 });
