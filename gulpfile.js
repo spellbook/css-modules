@@ -9,6 +9,7 @@
 // -------------------------------------
 
 var gulp = require('gulp');
+var autoprefixer = require('gulp-autoprefixer');
 var scss = require('gulp-scss');
 var cleanCSS = require('gulp-clean-css');
 var rename = require('gulp-rename');
@@ -20,10 +21,18 @@ var rename = require('gulp-rename');
 gulp.task('compile', function() {
   gulp.src('application.scss')
     .pipe(scss())
+    .pipe(autoprefixer({
+      browsers : ['last 2 versions'],
+      cascade : false
+    }))
     .pipe(rename('spellbook-modules.css'))
     .pipe(gulp.dest('dist'));
   gulp.src('modules/*.scss')
     .pipe(scss())
+    .pipe(autoprefixer({
+      browsers : ['last 2 versions'],
+      cascade : false
+    }))
     .pipe(rename(function(filename) {
       filename.basename = filename.basename.replace('_', '');
       return filename;
